@@ -1,0 +1,235 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0px;
+  outline: none;
+  font-family: Poppins-Regular;
+  text-decoration: none;
+}
+@font-face {
+  font-family: Poppins-LightItalic;
+  src: url("../fonts/Poppins-LightItalic.ttf");
+}
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url("../fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+.page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+}
+a {
+  color: #1570ef;
+}
+.signUp-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  flex-shrink: 0;
+}
+.signUp-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  background-image: url("../images/bg.svg");
+  background-position: center;
+  background-size: cover;
+  padding: 4rem 5rem;
+}
+.relative {
+  position: relative;
+}
+.signUp-text {
+  font-family: Poppins-LightItalic;
+  font-size: 3.5rem;
+  background: -webkit-linear-gradient(
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.4)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 120%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.form-title {
+  font-family: Poppins-SemiBold;
+  font-size: 1.5rem;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.input-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+label {
+  font-family: Poppins-Regular;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  /* margin: 10px 0 5px; */
+  color: #344054;
+}
+input {
+  width: 100%;
+  font-family: Poppins-Regular;
+  font-size: 0.875rem;
+  padding: 1rem 0.8rem;
+  outline: 1px solid #d0d5dd;
+  width: 100%;
+  border-radius: 0.5rem;
+  color: #344054;
+  border: 0px;
+}
+
+.eye {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+input::placeholder {
+  color: #98a2b3;
+}
+input:focus {
+  /* border: 3px solid #d1e9ff; */
+  outline: 3px solid #d1e9ff;
+}
+.btn {
+  font-family: Poppins-SemiBold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 48px;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: 0px;
+  color: #fff;
+}
+
+.btn-primary {
+  background: #1570ef;
+}
+.btn-secondary {
+  background: #d1e9ff;
+  color: #1570ef;
+}
+.have-account {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #98a2b3;
+}
+
+/* LOGIN */
+#login {
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/login-bg.svg");
+  background-position: center;
+  background-size: cover;
+  background-color: #050a24;
+}
+.login-form {
+  background: #fff;
+  padding: 1rem 2rem;
+  border-radius: 1.25rem;
+}
+
+.login-form .form-title {
+  text-align: center;
+  font-size: 1.75rem;
+}
+/* LOGIN Dark */
+#login-dark {
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/loginDark-bg.svg");
+  background-position: center;
+  background-size: cover;
+  background-color: #0a0a0a;
+}
+
+#login-dark .login-form {
+  background: rgba(19, 19, 22, 0.9);
+  padding: 3rem 4.5rem;
+  border-radius: 1.25rem;
+}
+
+#login-dark .form-title {
+  text-align: center;
+  color: #fff;
+  font-size: 1.75rem;
+}
+#login-dark label {
+  color: #d1d1d6;
+}
+
+#login-dark input::placeholder {
+  color: #70707b;
+}
+
+#login-dark input {
+  background: none;
+  outline: 1px solid #3f3f46;
+}
+
+.social-btn-wrap {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-btn-wrap .btn {
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+.btn-dark {
+  background: #26272b;
+  color: #a0a0ab;
+}
+
+#login-dark input:focus {
+  /* border: 3px solid #d1e9ff; */
+  outline: 3px solid #1877f2;
+}
+
+@media only screen and (min-width: 1024px) {
+  .page {
+    padding: 0px;
+  }
+  .form {
+    width: 400px;
+  }
+  .login-form {
+    background: #fff;
+    padding: 3rem 4.5rem;
+    border-radius: 1.25rem;
+  }
+}
